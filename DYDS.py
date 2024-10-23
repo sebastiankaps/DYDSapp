@@ -1,4 +1,36 @@
 import streamlit as st
+
+# Custom CSS for the login page
+st.markdown(
+    """
+    <style>
+    body {
+        background-color: #1c1c1c; /* Dark background */
+        color: white; /* White text */
+    }
+    .stButton>button {
+        background-color: #1c1c1c; /* Dark button background */
+        color: white; /* White button text */
+        border: none; /* Remove button border */
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .stButton>button:hover {
+        background-color: #3d3d3d; /* Darker background on hover */
+        color: #ffffff; /* Ensure text stays white */
+    }
+    .stTextInput input {
+        background-color: #3d3d3d; /* Input field background */
+        color: white; /* Input field text color */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Rest of your login page code...
+st.title("DID YOUR DAY SUCK?")
+st.text_input("🪄 Choose your magic word to find out...", key="magic_word")
+st.button("Open sesame")
 import pandas as pd
 import altair as alt
 from datetime import date
